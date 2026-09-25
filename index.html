@@ -145,7 +145,22 @@
       width: 100%; height: 285px; display: block; object-fit: cover; object-position: top center;
       border: 1px solid #c7c2b8; border-radius: 7px;
     }
-    .project-image.contain img { object-fit: contain; background: #fff; padding: 18px; }
+    /* Keep logo/screenshot images fully inside the project image frame */
+    .project-image.contain {
+      height: 294px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .project-image.contain img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #fff;
+      padding: 12px;
+    }
     .project-body { display: flex; flex-direction: column; flex: 1; padding: 25px 26px 28px; }
     .project-meta { display: flex; justify-content: space-between; color: var(--muted); font-family: "DM Mono"; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; }
     .project h3 { margin: 17px 0 11px; font-size: 23px; line-height: 1.2; letter-spacing: -.035em; }
@@ -231,6 +246,7 @@
       .section-head { display: block; }
       .section-aside { margin-top: 20px; }
       .project-image img { height: 225px; }
+      .project-image.contain { height: 234px; }
       .achievement-head { align-items: flex-start; }
       .carousel-controls { padding-top: 7px; }
       .award-carousel { grid-auto-columns: 86%; }
@@ -329,7 +345,7 @@
           </article>
 
           <article class="project">
-            <div class="project-image contain"><img src="alumni.png" loading="lazy"></div>
+            <div class="project-image contain"><img src="alumni.png" alt="SIS Alumni Platform preview" loading="lazy"></div>
             <div class="project-body">
               <div class="project-meta"><span>Independent Developer</span><span>Ongoing</span></div>
               <h3>SIS Alumni Platform</h3>
@@ -360,7 +376,7 @@
           </article>
 
           <article class="project">
-            <div class="project-image contain"><img src="znotes.png" loading="lazy"></div>
+            <div class="project-image contain"><img src="znotes.png" alt="ZNotes platform preview" loading="lazy"></div>
             <div class="project-body">
               <div class="project-meta"><span>Notes Developer</span><span>May 2022 – Mar 2024</span></div>
               <h3>Cambridge Learning Resources for ZNotes</h3>
@@ -370,7 +386,7 @@
           </article>
 
           <article class="project">
-            <div class="project-image contain"><img src="nus.png" loading="lazy"></div>
+            <div class="project-image contain"><img src="nus.png" alt="NUS AI and Machine Learning program preview" loading="lazy"></div>
             <div class="project-body">
               <div class="project-meta"><span>NUS · AI & ML Program</span><span>Award</span></div>
               <h3>NUS AI & Machine Learning Program</h3>
